@@ -8,7 +8,7 @@ const QuoteSection = () => {
       <Container className="py-5">
         <div className="text-center mx-auto" style={{ maxWidth: '1000px' }}>
           <h2 className="display-5 fw-bold text-white text-center px-3">
-            "Total Play Field is the ultimate fantasy cricket platform, offering real-time updates, exciting tournaments, custom teams, expert insights, and rewarding prizes."
+            "Join the premier fantasy cricket platform where real-time updates, thrilling tournaments, personalized teams, expert strategies, and amazing rewards await you!"
           </h2>
         </div>
       </Container>

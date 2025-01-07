@@ -1,39 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 
 const FantasyCricketBanner = () => {
+    const [phoneNumber, setPhoneNumber] = useState('');
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle form submission logic here
+        console.log('Phone number submitted:', phoneNumber);
     };
 
     return (
         <div
-            className="min-h-[300px] w-full flex items-center justify-center"
-            style={{
-                background: 'linear-gradient(90deg, #f6d365 0%, #845EC2 100%)',
-                padding: "100px"
-            }}
+            className="fantasy-cricket-banner d-flex align-items-center justify-content-center"
         >
-            <Container className="py-16">
-                <Row className="justify-content-center">
-                    <Col xs={12} md={10} lg={8} className="text-center">
-                        <h2 className="text-white text-2xl md:text-3xl lg:text-4xl mb-8 font-semibold">
-                            Join countless players and enhance your fantasy cricket experience. Download our app or sign up on our website now!
+            <Container className="py-5">
+                <Row className="justify-content-center text-center">
+                    <Col xs={12} md={10} lg={8}>
+                        <h2 className="banner-heading mb-4">
+                            Join thousands of players and elevate your fantasy cricket journey. Download our app or sign up on our website today!
                         </h2>
 
-                        <Form onSubmit={handleSubmit} className="flex justify-center gap-2">
-                            <input
-                                type="text"
+                        <Form onSubmit={handleSubmit} className="get-started-form">
+                            <Form.Control
+                                type="tel"
                                 placeholder="Enter your Number"
-                                className="px-4 py-2 rounded-md border-0 bg-white/10 text-white placeholder-white/70 w-48"
-                                style={{
-                                    backdropFilter: 'blur(4px)',
-                                }}
+                                value={phoneNumber}
+                                onChange={(e) => setPhoneNumber(e.target.value)}
+                                className="form-input"
                             />
                             <Button
                                 type="submit"
-                                className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+                                className="form-submit-btn"
                             >
                                 Submit
                             </Button>

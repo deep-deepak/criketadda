@@ -8,8 +8,9 @@ function Opportunity() {
                 <Row className="justify-content-center align-items-center text-center">
                     <Col>
                         <h1 className="opportunity-text">
-                            Total Play Field – Where Every Match Presents a New Opportunity!
+                            Total Play Field – Every Match is a Fresh Opportunity to Win!
                         </h1>
+
                     </Col>
                 </Row>
             </Container>

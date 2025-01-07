@@ -7,24 +7,24 @@ import { FaUserSecret } from 'react-icons/fa';
 const FeaturesSection = () => {
   const features = [
     {
-      icon: <CgSmartphone className="text-gradient" size={40} />,
-      title: "Intuitive Design",
-      description: "Easily navigate our app and website for a seamless experience."
+      icon: <CgSmartphone className="icon-gradient" size={40} />,
+      title: "User-Friendly Interface",
+      description: "Navigate effortlessly through our app and website for a hassle-free experience."
     },
     {
-      icon: <FaUserSecret className="text-gradient" size={40} />,
-      title: "Custom Teams",
-      description: "Create your ideal team from a diverse array of players to accumulate points."
+      icon: <FaUserSecret className="icon-gradient" size={40} />,
+      title: "Customizable Teams",
+      description: "Build your dream team from a wide selection of players and earn points based on performance."
     },
     {
-      icon: <BiLineChart className="text-gradient" size={40} />,
-      title: "Pro Insights",
-      description: "Gain valuable tips and analysis from cricket professionals to refine your strategy."
+      icon: <BiLineChart className="icon-gradient" size={40} />,
+      title: "Expert Insights",
+      description: "Access professional tips and analysis to fine-tune your strategy and improve your performance."
     },
     {
-      icon: <BiBell className="text-gradient" size={40} />,
-      title: "Live Notifications",
-      description: "Stay updated with real-time scores, player statistics, and match highlights."
+      icon: <BiBell className="icon-gradient" size={40} />,
+      title: "Instant Notifications",
+      description: "Get real-time updates on scores, player stats, and match highlights, all at your fingertips."
     }
   ];
 
@@ -41,7 +41,7 @@ const FeaturesSection = () => {
               <div className="position-absolute circle-bg"></div>
 
               <img
-                src="/images/cashino.png"
+                src="/images/onlinegame1.avif"
                 alt="App Interface Preview"
                 className="img-fluid phone-image"
               />
@@ -91,6 +91,7 @@ const FeaturesSection = () => {
             max-width: 300px;
             margin: 0 auto;
             display: block;
+            height:500px;
           }
 
           .feature-card {
@@ -105,11 +106,10 @@ const FeaturesSection = () => {
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
           }
 
-          .text-gradient {
-            color: transparent;
-            background: linear-gradient(45deg, #7C5CFC, #FFB347);
-            background-clip: text;
+          .icon-gradient {
+            background: linear-gradient(45deg, #FF7E5F, #FFB347); /* Gradient colors */
             -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; /* Makes the icon use the gradient */
           }
 
           @media (max-width: 991.98px) {

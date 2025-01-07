@@ -1,71 +1,70 @@
 import React, { useState } from 'react';
 import { Navbar, Nav, Container, Button } from 'react-bootstrap';
-import { BsChatDots } from "react-icons/bs";
+import { BsChatDots } from 'react-icons/bs';
 
-
-const Header = () => {
+const Header = ({ onFeaturesClick, onDownloadClick, onAboutClick }) => {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <Navbar 
-      bg="white" 
-      expand="lg" 
+    <Navbar
+      bg="white"
+      expand="lg"
       expanded={expanded}
-      onToggle={() => setExpanded(!expanded)} 
-      className="py-2 py-lg-3 shadow-sm sticky-top"
+      onToggle={() => setExpanded(!expanded)}
+      className=" shadow-sm sticky-top"
     >
       <Container>
-        <Navbar.Brand 
-          href="#home" 
-          className="fw-bold fs-4"
-        >
-          <img src='/images/logo.jpg'
-          height={60}
-          width={60}
-          />
+        <Navbar.Brand href="#home" className="fw-bold fs-4">
+          <img src="/images/logo1.jpg" height={70} width={70} alt="Logo" />
         </Navbar.Brand>
-        
-        <Navbar.Toggle 
+
+        <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           className="border-0 shadow-none"
         />
-        
+
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto align-items-lg-center">
-            <Nav.Link 
-              href="#features" 
+            <Nav.Link
               className="my-2 my-lg-0 mx-lg-2 text-center"
-              onClick={() => setExpanded(false)}
+              onClick={() => {
+                onFeaturesClick();
+                setExpanded(false);
+              }}
             >
               Features
             </Nav.Link>
-            <Nav.Link 
-              href="#download" 
+            <Nav.Link
               className="my-2 my-lg-0 mx-lg-2 text-center"
-              onClick={() => setExpanded(false)}
+              onClick={() => {
+                onDownloadClick();
+                setExpanded(false);
+              }}
             >
               Download
             </Nav.Link>
-            <Nav.Link 
-              href="#about" 
+            <Nav.Link
               className="my-2 my-lg-0 mx-lg-2 text-center"
-              onClick={() => setExpanded(false)}
+              onClick={() => {
+                onAboutClick();
+                setExpanded(false);
+              }}
             >
               About Us
             </Nav.Link>
             <div className="d-grid d-lg-block mt-3 mt-lg-0">
-              <Button 
+              <Button
                 className="px-4 py-2 w-100 w-lg-auto"
                 style={{
                   backgroundColor: '#F7C94B',
                   border: 'none',
                   color: 'white',
                   borderRadius: '5px',
-                  gap:"10px"
+                  gap: '10px',
                 }}
                 onClick={() => setExpanded(false)}
               >
-                <BsChatDots style={{marginRight:"5px"}}/>
+                <BsChatDots style={{ marginRight: '5px' }} />
                 Send Feedback
               </Button>
             </div>
@@ -77,33 +76,3 @@ const Header = () => {
 };
 
 export default Header;
-
-/* Add these custom styles to your CSS file */
-const styles = `
-@media (max-width: 991.98px) {
-  .navbar-collapse {
-    padding: 1rem 0;
-  }
-  
-  .nav-link {
-    padding: 0.5rem 0;
-  }
-  
-  .navbar-nav {
-    padding-top: 1rem;
-  }
-}
-
-.navbar-toggler:focus {
-  box-shadow: none;
-}
-
-.nav-link {
-  color: #333;
-  transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-  color: #F7C94B;
-}
-`;

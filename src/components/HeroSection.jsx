@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 
 const HeroSection = () => {
   const [phoneNumber, setPhoneNumber] = useState('');
@@ -18,13 +21,10 @@ const HeroSection = () => {
           {/* Left Column - Text Content */}
           <Col lg={6} className="mb-5 mb-lg-0">
             <h1 className="display-3 fw-bold mb-4" style={{ color: '#1a1a1a' }}>
-              Welcome to<br />
-              Total Play Field!
+            Step Into <br/> the Game of Champions!
             </h1>
             <p className="lead mb-5" style={{ color: '#666', maxWidth: '540px' }}>
-              Dive into the ultimate fantasy sports experience where your
-              cricket knowledge and strategic thinking come to life. Compete
-              with friends and cricket fans from around the world!
+            Join the ultimate platform for fantasy sports enthusiasts. Showcase your cricket expertise, strategize like a pro, and compete with fans worldwide to claim your glory!
             </p>
             
             <div className="get-started">
